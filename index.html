@@ -4,7 +4,6 @@
         <title>Portfolio Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -17,6 +16,9 @@
             background-size: cover;
             background-image: url('/w3images/profile_girl.jpg');
             min-height: 100%;
+        }
+        #welcome-section {
+          height: 100%;
         }
 
                     /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
@@ -258,29 +260,28 @@
     </head>
 <body>
 
-    <section  id="welcome-section">
-
-        <h1>I am Marc</h1>
-        <p>web developer</p>
-
-    </section>
 
 <!-- Sidebar with image -->
 <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-  <div class="bgimg"></div>
+    <section  id="welcome-section">
+        <h1>Marc Leon's Portfolio</h1>
+       <div class="bgimg"></div>
+    </section>
 </nav>
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
 <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-    <i class="fa fa-remove"></i>
-  </a>
-  <div class="w3-bar-block w3-center">
+  <nav id ="navbar">
+<a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+<i class="fa fa-remove"></i>
+</a>
+<div class="w3-bar-block w3-center">
     <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfolio</a>
     <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
     <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
-  </div>
+</div>
+  </nav>
 </nav>
 
 <!-- Page Content -->
@@ -306,21 +307,26 @@
     <hr class="w3-opacity">
 
     <!-- Grid for photos -->
+    <section id="projects"> 
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/rocks.jpg" style="width:100%">
-        <img src="/w3images/sailboat.jpg" style="width:100%">
-      </div>
+        <a href="https://marcsmyname.github.io/TributePage/"> project 1
+        </a><img src="/w3images/wedding.jpg" class="project-tile" style="width:100%">
 
-      <div class="w3-half">
-        <img src="/w3images/underwater.jpg" style="width:100%">
-        <img src="/w3images/chef.jpg" style="width:100%">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/p6.jpg" style="width:100%">
-      </div>
+        <a href="https://marcsmyname.github.io/LandingPage/"> project 2
+           </a>
+           <img src="/w3images/rocks.jpg" class="project-tile" style="width:100%"> 
+  
+        <a href="https://marcsmyname.github.io/TechnicalDocumentation/"> project 3
+        </a>
+        <img src="/w3images/sailboat.jpg" class="project-tile" style="width:100%">
+        <a href="#"> project 4
+          <img src="/w3images/sailboat.jpg" class="project-tile" style="width:100%">
+        </a>
+      
     <!-- End photo grid -->
     </div>
+    </section>
   <!-- End Portfolio Section -->
   </div>
 
@@ -456,12 +462,13 @@
   
   <!-- Footer -->
   <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <a href="https://www.freecodecamp.org/fcc90766bba-c1e4-45d8-9ffa-e6e81fe48f1a" target="_blank" id="profile-link">
+    <i class="fa fa-free-code-camp w3-hover-opacity"></i>
+  </a>
+    <a href="https://github.com/Marcsmyname"><i class="fa fa-github w3-hover-opacity" target="_blank"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/marc-leon-20299659/"><i class="fa fa-linkedin w3-hover-opacity"  target="_blank"></i>
+    </a>
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <!-- End footer -->
   </footer>
